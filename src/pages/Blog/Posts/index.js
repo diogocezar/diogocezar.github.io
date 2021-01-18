@@ -30,7 +30,7 @@ class Posts extends Component {
 
   loadContent = async (page) => {
     const posts = await BlogService.getPosts(page)
-    const { result: data, total, totalPages } = posts
+    const { posts: data, total, totalPages } = posts
 
     this.setState({
       data, total, totalPages, loading: false, page,

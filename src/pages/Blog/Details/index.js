@@ -29,7 +29,7 @@ class Details extends Component {
 
   loadContent = async (slug) => {
     const posts = await BlogService.getPost(slug)
-    const { result: data, total, totalPages } = posts
+    const { posts: data, total, totalPages } = posts
 
     this.setState({
       data, total, totalPages, loading: false,
